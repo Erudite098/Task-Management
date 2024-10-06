@@ -163,7 +163,7 @@
                 });
             });
 
-            //delete task            
+            // Delete task            
             $(document).on('click', '.del-task', function() {
                 const taskId = $(this).data('id'); // Get the task ID
 
@@ -172,7 +172,7 @@
                         url: 'delete_task.php', 
                         type: 'POST',
                         data: { id: taskId }, // Send the task ID
-                        dataType: 'html',
+                        dataType: 'json',
                         success: function(response) {
                             if (response.status === 'success') {
                                 // Refresh the task list
@@ -235,7 +235,7 @@
                 if (isChecked) {
                     if (confirm('Mark this task as completed?')) {
                         $.ajax({
-                            url: 'completed_task.php', // Call the PHP file to mark as completed
+                            url: 'mark_complete.php', 
                             type: 'POST',
                             data: { id: taskId },
                             dataType: 'json',
@@ -273,7 +273,8 @@
 
             // Update the tasks table dynamically
             function updateTaskTable(tasks) {
-                $('#tblTask tbody').empty(); // Clear existing rows
+                // Clear existing rows so that the current tasks are not duplicated
+                $('#tblTask tbody').empty(); 
 
                 if (tasks.length > 0) {
                     tasks.forEach(function(task) {
