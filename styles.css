@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+/* Global styles */
+body {
+    background-color: #e9e6e6;
+    font-family: 'poppins';
+}
+
+nav {
+    background-color: #3949ab;
+    position: fixed;
+}
+
+nav .brand-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: white;
+}
+
+h4 {
+    font-weight: 450;
+    color: #3949ab;
+}
+
+/* Ensure table responsiveness for small screens */
+@media screen and (max-width: 878px) {
+  table {
+    width: auto;
+  }
+
+  th, td {
+    white-space: nowrap; 
+  }
+}
+
+/* Task Section */
+.task-section .container{
+    width: auto;
+}
+
+/* Table */
+table.highlight {
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.highlight tbody tr:last-of-type {
+    border-bottom: 2px solid #3949ab;
+}
+
+table.highlight thead th {
+    font-weight: 600;
+    background-color: #3949ab;
+    color: white;
+    text-align: center;
+    position: sticky;
+    padding: 20px 20px;
+}
+
+table.highlight tbody td {
+    text-align: center;
+}
+
+table.highlight th:first-child,
+table.highlight td:first-child {
+    text-align: left;
+}
+
+table.highlight.completed-tbl th,
+table.highlight.completed-tbl td {
+    text-align: center;
+}
+
+table.highlight tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+table.highlight tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tr:hover .task-title {
+    color: #3949ab;
+    cursor: pointer;
+}
+
+table.highlight tbody td {
+    padding: 15px;
+}
+
+td label span {
+    font-size: 1.1rem;
+    color: black;
+}
+
+/* Floating Button */
+.btn-floating {
+    background-color: #3949ab;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-floating:hover {
+    background-color: #5c6bc0;
+}
+
+.btn-floating i {
+    font-size: 20px;
+    color: white;
+}
+
+/* Modal */
+.modal {
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-content {
+    padding-bottom: 0;
+}
+
+.modal-footer {
+    background-color: #f5f5f5;
+    padding-top: 20px;
+}
+
+/* Form */
+.input-field input[type=text],
+.input-field textarea {
+    border-bottom: 1px solid #3949ab;
+    box-shadow: none;
+}
+
+.input-field input[type=text]:focus,
+.input-field textarea:focus {
+    border-bottom: 2px solid #3949ab;
+}
+
+.input-field label {
+    color: #3949ab;
+}
+
+.input-field label.active {
+    color: #3949ab;
+}
+
+/* Buttons */
+.btn {
+    background-color: #3949ab;
+}
+
+.btn:hover {
+    background-color: #5c6bc0;
+}
+
+.modal-close.btn-flat {
+    color: #3949ab;
+    font-weight: bold;
+}
+
+/* Status Dropdown */
+select {
+    border-bottom: 1px solid #3949ab;
+}
+
+select:focus {
+    border-bottom: 2px solid #3949ab;
+}
+
+/* Custom checkbox for completed tasks */
+input[type="checkbox"].mark-complete:checked + span {
+    text-decoration: line-through;
+    color: #66bb6a;
+}
+
+/* Custom styles for empty state */
+#tblTask tbody td { 
+    color: #757575;
+}
+
+/* Delete button */
+.del-task {
+    background-color: #e53935;
+}
+
+.del-task:hover {
+    background-color: #e9706e;
+}
+
+/* Edit button */
+.edit-task {
+    background-color: #27962d;
+}
+
+.edit-task:hover {
+    background-color: #66bb6a;
+}
