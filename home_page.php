@@ -6,7 +6,7 @@
     
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!--<link rel="stylesheet" href="styles.css">-->
+
     <link rel="stylesheet" href="styles.css">
 
     <!-- Fontawesome cdn -->
@@ -172,7 +172,7 @@
                         url: 'delete_task.php', 
                         type: 'POST',
                         data: { id: taskId }, // Send the task ID
-                        dataType: 'json',
+                        dataType: 'html',
                         success: function(response) {
                             if (response.status === 'success') {
                                 // Refresh the task list
@@ -302,6 +302,7 @@
                     $('#tblTask tbody').append('<tr><td colspan="6" class="no-tasks">No tasks available</td></tr>');
                 }
             }
+
             // Fetch tasks initially when the page loads
             fetchTasks();
         });
